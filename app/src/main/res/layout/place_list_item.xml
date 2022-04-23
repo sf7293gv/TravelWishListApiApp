@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/medium_spacing"
+    app:cardBackgroundColor="@color/list_item_background"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_spacing">
+
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_background"
+            android:textColor="#AEEA00"
+            android:textSize="@dimen/large_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/map_icon"
+            app:layout_constraintStart_toEndOf="@+id/star_check"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Place Name" />
+
+        <ImageView
+            android:id="@+id/map_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/extra_large_spacing"
+            android:contentDescription="@string/show_map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_dialog_map"
+            app:tint="#FFEB3B" />
+
+        <TextView
+            android:id="@+id/reason_to_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_spacing"
+            android:padding="@dimen/medium_spacing"
+            android:textColor="#8BC34A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/map_icon"
+            app:layout_constraintStart_toEndOf="@+id/star_check"
+            app:layout_constraintTop_toBottomOf="@+id/place_name"
+            app:layout_constraintVertical_bias="0.625"
+            tools:text="Date Added" />
+
+        <CheckBox
+            android:id="@+id/star_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_spacing"
+            android:button="@drawable/star_check_icons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
